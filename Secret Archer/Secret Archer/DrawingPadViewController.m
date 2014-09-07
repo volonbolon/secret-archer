@@ -8,6 +8,7 @@
 
 #import "DrawingPadViewController.h"
 #import "Doodle.h"
+#import "DoodleDelegate.h"
 
 @interface DrawingPadViewController () <UIAlertViewDelegate>
 - (IBAction)save:(id)sender;
@@ -32,12 +33,29 @@
     
 }
 
-- (IBAction)cancel:(id)sender
+- (void)saveViewWithTitle:(NSString *)title;
 {
     
-    [[self presentingViewController] dismissViewControllerAnimated:YES
-                                                        completion:NULL];
-
+    CGRect rect = [[self view] bounds];
+    UIGraphicsBeginImageContextWithOptions(rect.size,YES,0.0f);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    [[[self view] layer] renderInContext:context];
+    UIImage *capturedImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    Doodle *doodle = [[Doodle alloc] initWithTitle:title
+                                             image:capturedImage];
+    
+    NSObject <DoodleDelegate> *dd = [self doodleDelegate];
+    
+    if ( nil != dd ) {
+        
+        [dd doodleCreated:doodle];
+        
+    }
+    
+    [[self navigationController] popViewControllerAnimated:YES];
+    
 }
 
 #pragma mark - UIAlerViewDelegate

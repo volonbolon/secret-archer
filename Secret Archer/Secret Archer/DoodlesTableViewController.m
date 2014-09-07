@@ -113,6 +113,23 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+#pragma mark - DoodleDelegate 
+- (void)doodleCreated:(Doodle *)doodle
+{
+    
+    NSArray *doodles = [self doodles];
+    if ( nil == doodles ) {
+        
+        doodles = [NSArray new];
+        
+    }
+    
+    NSMutableArray *mutableDoodles = [doodles mutableCopy];
+    [mutableDoodles addObject:doodle];
+    [self setDoodles:[mutableDoodles copy]];
+    
+    [[self tableView] reloadData];
+    
 }
 */
 

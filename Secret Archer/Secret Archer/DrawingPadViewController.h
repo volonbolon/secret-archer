@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DrawingPadViewController : UIViewController
+@protocol DoodleDelegate;
 
+@interface DrawingPadViewController : UIViewController
+@property (weak) NSObject <DoodleDelegate> *doodleDelegate;
 @end
