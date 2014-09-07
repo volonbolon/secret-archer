@@ -10,6 +10,7 @@
 		B0456C4819BCB2C70062B772 /* DrawingPadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0456C4719BCB2C70062B772 /* DrawingPadViewController.m */; };
 		B0456C4B19BCCA670062B772 /* Doodle.m in Sources */ = {isa = PBXBuildFile; fileRef = B0456C4A19BCCA670062B772 /* Doodle.m */; };
 		B0456C4E19BCCCEF0062B772 /* DoodlesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0456C4D19BCCCEF0062B772 /* DoodlesTableViewController.m */; };
+		B061CD2C19BCD73900FDE9FF /* DoodleViewerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B061CD2B19BCD73900FDE9FF /* DoodleViewerViewController.m */; };
 		B0C6B1AF19BCAD6A00CD670C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C6B1AE19BCAD6A00CD670C /* main.m */; };
 		B0C6B1B219BCAD6A00CD670C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C6B1B119BCAD6A00CD670C /* AppDelegate.m */; };
 		B0C6B1B819BCAD6A00CD670C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0C6B1B619BCAD6A00CD670C /* Main.storyboard */; };
@@ -36,6 +37,8 @@
 		B0456C4C19BCCCEF0062B772 /* DoodlesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoodlesTableViewController.h; sourceTree = "<group>"; };
 		B0456C4D19BCCCEF0062B772 /* DoodlesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoodlesTableViewController.m; sourceTree = "<group>"; };
 		B061CD2919BCD2DF00FDE9FF /* DoodleDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoodleDelegate.h; sourceTree = "<group>"; };
+		B061CD2A19BCD73900FDE9FF /* DoodleViewerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoodleViewerViewController.h; sourceTree = "<group>"; };
+		B061CD2B19BCD73900FDE9FF /* DoodleViewerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoodleViewerViewController.m; sourceTree = "<group>"; };
 		B0C6B1A919BCAD6A00CD670C /* Secret Archer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Secret Archer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0C6B1AD19BCAD6A00CD670C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0C6B1AE19BCAD6A00CD670C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -103,6 +106,8 @@
 				B0456C4C19BCCCEF0062B772 /* DoodlesTableViewController.h */,
 				B0456C4D19BCCCEF0062B772 /* DoodlesTableViewController.m */,
 				B061CD2919BCD2DF00FDE9FF /* DoodleDelegate.h */,
+				B061CD2A19BCD73900FDE9FF /* DoodleViewerViewController.h */,
+				B061CD2B19BCD73900FDE9FF /* DoodleViewerViewController.m */,
 			);
 			path = "Secret Archer";
 			sourceTree = "<group>";
@@ -237,6 +242,7 @@
 				B0456C4E19BCCCEF0062B772 /* DoodlesTableViewController.m in Sources */,
 				B0C6B1D119BCAEB300CD670C /* DrawPadView.m in Sources */,
 				B0456C4819BCB2C70062B772 /* DrawingPadViewController.m in Sources */,
+				B061CD2C19BCD73900FDE9FF /* DoodleViewerViewController.m in Sources */,
 				B0C6B1AF19BCAD6A00CD670C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

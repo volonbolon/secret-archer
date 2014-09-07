@@ -27,6 +27,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Acq-ZC-G4u" kind="show" identifier="presentDoodleViewControllerSegue" id="fLi-th-s6v"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -37,7 +40,7 @@
                     <navigationItem key="navigationItem" id="P5H-6A-gKu">
                         <barButtonItem key="rightBarButtonItem" title="Load Drawing Pad" id="trk-FY-n4m">
                             <connections>
-                                <segue destination="fck-q8-XvY" kind="show" identifier="presentDoodleViewControllerSegue" id="spX-sq-bUG"/>
+                                <segue destination="fck-q8-XvY" kind="show" identifier="presentCreateDoodleViewControllerSegue" id="spX-sq-bUG"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -45,6 +48,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="40t-rU-dzf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="828" y="141"/>
+        </scene>
+        <!--Doodle Viewer View Controller-->
+        <scene sceneID="CM6-Rf-5i7">
+            <objects>
+                <viewController id="Acq-ZC-G4u" customClass="DoodleViewerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vfA-oc-agb"/>
+                        <viewControllerLayoutGuide type="bottom" id="pwJ-Rw-nnz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1bE-dB-2i3">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UAx-MM-DKI">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pwJ-Rw-nnz" firstAttribute="top" secondItem="UAx-MM-DKI" secondAttribute="bottom" id="5Fp-9x-8ru"/>
+                            <constraint firstItem="UAx-MM-DKI" firstAttribute="top" secondItem="1bE-dB-2i3" secondAttribute="top" id="6p7-QP-jUs"/>
+                            <constraint firstAttribute="trailing" secondItem="UAx-MM-DKI" secondAttribute="trailing" id="n7O-j5-rBN"/>
+                            <constraint firstItem="UAx-MM-DKI" firstAttribute="leading" secondItem="1bE-dB-2i3" secondAttribute="leading" id="vsL-xM-vPk"/>
+                        </constraints>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="UAx-MM-DKI" id="VtV-jt-lkJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jI9-mw-ZJ6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1407" y="425"/>
         </scene>
         <!--Drawing Pad View Controller-->
         <scene sceneID="Dk0-Wn-gxL">
@@ -70,7 +106,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B0q-EE-kyf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1395" y="141"/>
+            <point key="canvasLocation" x="1407" y="-115"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jwW-bt-MzJ">
