@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  DoodlesTableViewController.h
 //  Secret Archer
 //
 //  Created by Ariel Rodriguez on 9/7/14.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface DoodlesTableViewController : UITableViewController
 
 @end
-
