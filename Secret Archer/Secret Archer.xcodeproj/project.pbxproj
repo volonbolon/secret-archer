@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B0456C4819BCB2C70062B772 /* DrawingPadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0456C4719BCB2C70062B772 /* DrawingPadViewController.m */; };
+		B0456C4B19BCCA670062B772 /* Doodle.m in Sources */ = {isa = PBXBuildFile; fileRef = B0456C4A19BCCA670062B772 /* Doodle.m */; };
 		B0C6B1AF19BCAD6A00CD670C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C6B1AE19BCAD6A00CD670C /* main.m */; };
 		B0C6B1B219BCAD6A00CD670C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C6B1B119BCAD6A00CD670C /* AppDelegate.m */; };
 		B0C6B1B519BCAD6A00CD670C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C6B1B419BCAD6A00CD670C /* ViewController.m */; };
@@ -30,6 +31,8 @@
 /* Begin PBXFileReference section */
 		B0456C4619BCB2C70062B772 /* DrawingPadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawingPadViewController.h; sourceTree = "<group>"; };
 		B0456C4719BCB2C70062B772 /* DrawingPadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawingPadViewController.m; sourceTree = "<group>"; };
+		B0456C4919BCCA670062B772 /* Doodle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Doodle.h; sourceTree = "<group>"; };
+		B0456C4A19BCCA670062B772 /* Doodle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Doodle.m; sourceTree = "<group>"; };
 		B0C6B1A919BCAD6A00CD670C /* Secret Archer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Secret Archer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0C6B1AD19BCAD6A00CD670C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0C6B1AE19BCAD6A00CD670C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -96,6 +99,8 @@
 				B0C6B1D019BCAEB300CD670C /* DrawPadView.m */,
 				B0456C4619BCB2C70062B772 /* DrawingPadViewController.h */,
 				B0456C4719BCB2C70062B772 /* DrawingPadViewController.m */,
+				B0456C4919BCCA670062B772 /* Doodle.h */,
+				B0456C4A19BCCA670062B772 /* Doodle.m */,
 			);
 			path = "Secret Archer";
 			sourceTree = "<group>";
@@ -225,6 +230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0456C4B19BCCA670062B772 /* Doodle.m in Sources */,
 				B0C6B1B519BCAD6A00CD670C /* ViewController.m in Sources */,
 				B0C6B1B219BCAD6A00CD670C /* AppDelegate.m in Sources */,
 				B0C6B1D119BCAEB300CD670C /* DrawPadView.m in Sources */,
