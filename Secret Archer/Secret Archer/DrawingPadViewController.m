@@ -7,21 +7,27 @@
 //
 
 #import "DrawingPadViewController.h"
+#import "Doodle.h"
 
-@interface DrawingPadViewController ()
+@interface DrawingPadViewController () <UIAlertViewDelegate>
 - (IBAction)save:(id)sender;
-
-- (IBAction)cancel:(id)sender;
+- (void)saveViewWithTitle:(NSString *)title;
 
 @end
 
 @implementation DrawingPadViewController
 
-- (void)viewDidLoad
+- (IBAction)save:(id)sender
 {
-    
-    [super viewDidLoad];
 
+    UIAlertView *saveAlertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Save", nil)
+                                                            message:nil
+                                                           delegate:self
+                                                  cancelButtonTitle:NSLocalizedString(@"Cancel", nil)
+                                                  otherButtonTitles:NSLocalizedString(@"OK", nil), nil];
+    [saveAlertView setAlertViewStyle:UIAlertViewStylePlainTextInput];
+    [[saveAlertView textFieldAtIndex:0] setPlaceholder:NSLocalizedString(@"Title", nil)];
+    [saveAlertView show];
     
     
 }
@@ -34,11 +40,18 @@
 
 }
 
-- (IBAction)save:(id)sender
+#pragma mark - UIAlerViewDelegate
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
 {
-
-    [[self presentingViewController] dismissViewControllerAnimated:YES
-                                                        completion:NULL];
+    
+    if ( [alertView cancelButtonIndex] != buttonIndex ) {
+        
+        NSString *title = [[alertView textFieldAtIndex:0] text];
+        
+        [self saveViewWithTitle:title];
+        
+    }
     
 }
+
 @end
