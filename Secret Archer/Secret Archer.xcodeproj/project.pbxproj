@@ -13,6 +13,7 @@
 		B0C6B1B819BCAD6A00CD670C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0C6B1B619BCAD6A00CD670C /* Main.storyboard */; };
 		B0C6B1BA19BCAD6A00CD670C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0C6B1B919BCAD6A00CD670C /* Images.xcassets */; };
 		B0C6B1C619BCAD6B00CD670C /* Secret_ArcherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C6B1C519BCAD6B00CD670C /* Secret_ArcherTests.m */; };
+		B0C6B1D119BCAEB300CD670C /* DrawPadView.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C6B1D019BCAEB300CD670C /* DrawPadView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,8 @@
 		B0C6B1BF19BCAD6A00CD670C /* Secret ArcherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Secret ArcherTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0C6B1C419BCAD6B00CD670C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0C6B1C519BCAD6B00CD670C /* Secret_ArcherTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Secret_ArcherTests.m; sourceTree = "<group>"; };
+		B0C6B1CF19BCAEB300CD670C /* DrawPadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawPadView.h; sourceTree = "<group>"; };
+		B0C6B1D019BCAEB300CD670C /* DrawPadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawPadView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +89,8 @@
 				B0C6B1B619BCAD6A00CD670C /* Main.storyboard */,
 				B0C6B1B919BCAD6A00CD670C /* Images.xcassets */,
 				B0C6B1AC19BCAD6A00CD670C /* Supporting Files */,
+				B0C6B1CF19BCAEB300CD670C /* DrawPadView.h */,
+				B0C6B1D019BCAEB300CD670C /* DrawPadView.m */,
 			);
 			path = "Secret Archer";
 			sourceTree = "<group>";
@@ -217,6 +222,7 @@
 			files = (
 				B0C6B1B519BCAD6A00CD670C /* ViewController.m in Sources */,
 				B0C6B1B219BCAD6A00CD670C /* AppDelegate.m in Sources */,
+				B0C6B1D119BCAEB300CD670C /* DrawPadView.m in Sources */,
 				B0C6B1AF19BCAD6A00CD670C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
