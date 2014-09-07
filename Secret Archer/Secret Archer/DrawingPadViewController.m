@@ -11,6 +11,7 @@
 @interface DrawingPadViewController ()
 - (IBAction)save:(id)sender;
 
+- (IBAction)cancel:(id)sender;
 
 @end
 
@@ -25,7 +26,13 @@
     
 }
 
+- (IBAction)cancel:(id)sender
+{
+    
+    [[self presentingViewController] dismissViewControllerAnimated:YES
+                                                        completion:NULL];
 
+}
 
 - (IBAction)save:(id)sender
 {

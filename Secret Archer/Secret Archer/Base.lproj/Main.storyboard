@@ -52,6 +52,11 @@
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="1L5-pc-lM8">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="djC-eH-Rut">
+                            <connections>
+                                <action selector="cancel:" destination="fck-q8-XvY" id="gGA-i3-RPn"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="Mvc-jm-PJs">
                             <connections>
                                 <action selector="save:" destination="fck-q8-XvY" id="UyS-Ol-D9E"/>
