@@ -4,20 +4,28 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Doodles Table View Controller-->
         <scene sceneID="y03-JJ-xum">
             <objects>
-                <tableViewController id="B34-hW-nLe" sceneMemberID="viewController">
+                <tableViewController id="B34-hW-nLe" customClass="DoodlesTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="csi-H4-YoE">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" indentationWidth="10" id="GOR-HF-jM1">
+                            <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DoodleCell" textLabel="0Xu-uv-03h" style="IBUITableViewCellStyleDefault" id="GOR-HF-jM1">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GOR-HF-jM1" id="s1v-UE-csB">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0Xu-uv-03h">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -29,7 +37,7 @@
                     <navigationItem key="navigationItem" id="P5H-6A-gKu">
                         <barButtonItem key="rightBarButtonItem" title="Load Drawing Pad" id="trk-FY-n4m">
                             <connections>
-                                <segue destination="fck-q8-XvY" kind="show" id="spX-sq-bUG"/>
+                                <segue destination="fck-q8-XvY" kind="show" identifier="presentDoodleViewControllerSegue" id="spX-sq-bUG"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -62,7 +70,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B0q-EE-kyf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2129" y="141"/>
+            <point key="canvasLocation" x="1395" y="141"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jwW-bt-MzJ">
