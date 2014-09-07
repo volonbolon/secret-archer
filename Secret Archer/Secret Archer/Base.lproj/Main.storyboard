@@ -45,7 +45,7 @@
                         <viewControllerLayoutGuide type="top" id="wcH-qs-tXh"/>
                         <viewControllerLayoutGuide type="bottom" id="HtB-oD-hB9"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kct-3Z-eQQ">
+                    <view key="view" contentMode="scaleToFill" id="kct-3Z-eQQ" customClass="DrawPadView">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
