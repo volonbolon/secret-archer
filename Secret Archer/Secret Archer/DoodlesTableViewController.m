@@ -11,38 +11,61 @@
 #import "DrawingPadViewController.h"
 #import "DoodleDelegate.h"
 #import "DoodleViewerViewController.h"
+#import "Helpers.h"
 
 NSString *const kDoodleCellIdentifier = @"DoodleCell";
 NSString *const kDoodlePresentCreateDoodleViewControllerSegueIdentifier = @"presentCreateDoodleViewControllerSegue";
 NSString *const kDoodlePresentDoodleViewControllerSegueIdentifier = @"presentDoodleViewControllerSegue";
+NSString *const kDoodlesFileName = @"doodles";
 
 @interface DoodlesTableViewController () <DoodleDelegate>
 @property (nonatomic, strong) NSArray *doodles;
+
+- (void)handleApplicationDidEnterBackgroundNotification:(NSNotification *)notification;
 @end
 
 @implementation DoodlesTableViewController
 
-- (instancetype)initWithStyle:(UITableViewStyle)style
+- (void)dealloc
 {
     
-    self = [super initWithStyle:style];
-    if ( nil != self) {
-
-        _doodles = [NSArray new];
-        
-    }
-    return self;
-
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    
 }
 
-- (void)didReceiveMemoryWarning
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+    self = [super initWithCoder:aDecoder];
+    
+    if ( nil != self) {
+        
+        _doodles = [NSArray new];
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(handleApplicationDidEnterBackgroundNotification:)
+                                                     name:UIApplicationDidEnterBackgroundNotification
+                                                   object:nil];
+        
+    }
+    
+    return self;
+    
+}
+
+- (void)viewDidLoad
+{
+    
+    if ( fwk_fileWithFileNameExist(kDoodlesFileName) ) {
+        
+        NSArray *doodles = [NSKeyedUnarchiver unarchiveObjectWithFile:fwk_pathWithFilename(kDoodlesFileName)];
+        [self setDoodles:doodles];
+        
+    }
+    
 }
 
 #pragma mark - Table view data source
-
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
 
@@ -59,6 +82,7 @@ NSString *const kDoodlePresentDoodleViewControllerSegueIdentifier = @"presentDoo
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kDoodleCellIdentifier
                                                             forIndexPath:indexPath];
     
@@ -107,6 +131,14 @@ NSString *const kDoodlePresentDoodleViewControllerSegueIdentifier = @"presentDoo
     [self setDoodles:[mutableDoodles copy]];
     
     [[self tableView] reloadData];
+    
+}
+
+- (void)handleApplicationDidEnterBackgroundNotification:(NSNotification *)notification
+{
+    
+    [NSKeyedArchiver archiveRootObject:[self doodles]
+                                toFile:fwk_pathWithFilename(kDoodlesFileName)];
     
 }
 
