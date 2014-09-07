@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B0456C4819BCB2C70062B772 /* DrawingPadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0456C4719BCB2C70062B772 /* DrawingPadViewController.m */; };
 		B0C6B1AF19BCAD6A00CD670C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C6B1AE19BCAD6A00CD670C /* main.m */; };
 		B0C6B1B219BCAD6A00CD670C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C6B1B119BCAD6A00CD670C /* AppDelegate.m */; };
 		B0C6B1B519BCAD6A00CD670C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C6B1B419BCAD6A00CD670C /* ViewController.m */; };
@@ -27,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B0456C4619BCB2C70062B772 /* DrawingPadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawingPadViewController.h; sourceTree = "<group>"; };
+		B0456C4719BCB2C70062B772 /* DrawingPadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawingPadViewController.m; sourceTree = "<group>"; };
 		B0C6B1A919BCAD6A00CD670C /* Secret Archer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Secret Archer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0C6B1AD19BCAD6A00CD670C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0C6B1AE19BCAD6A00CD670C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -91,6 +94,8 @@
 				B0C6B1AC19BCAD6A00CD670C /* Supporting Files */,
 				B0C6B1CF19BCAEB300CD670C /* DrawPadView.h */,
 				B0C6B1D019BCAEB300CD670C /* DrawPadView.m */,
+				B0456C4619BCB2C70062B772 /* DrawingPadViewController.h */,
+				B0456C4719BCB2C70062B772 /* DrawingPadViewController.m */,
 			);
 			path = "Secret Archer";
 			sourceTree = "<group>";
@@ -223,6 +228,7 @@
 				B0C6B1B519BCAD6A00CD670C /* ViewController.m in Sources */,
 				B0C6B1B219BCAD6A00CD670C /* AppDelegate.m in Sources */,
 				B0C6B1D119BCAEB300CD670C /* DrawPadView.m in Sources */,
+				B0456C4819BCB2C70062B772 /* DrawingPadViewController.m in Sources */,
 				B0C6B1AF19BCAD6A00CD670C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,6 +418,7 @@
 				B0C6B1CB19BCAD6B00CD670C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B0C6B1CC19BCAD6B00CD670C /* Build configuration list for PBXNativeTarget "Secret ArcherTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +427,7 @@
 				B0C6B1CE19BCAD6B00CD670C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
