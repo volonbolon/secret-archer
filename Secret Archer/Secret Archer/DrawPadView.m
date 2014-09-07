@@ -124,7 +124,7 @@
 - (void)drawBitMap
 {
     
-    UIGraphicsBeginImageContextWithOptions([self bounds].size, YES, [[[self window] screen] scale]);
+    UIGraphicsBeginImageContextWithOptions([self bounds].size, YES, 0.0f);
     [[UIColor blackColor] setStroke];
     
     if ( nil == [self cache] ) {
